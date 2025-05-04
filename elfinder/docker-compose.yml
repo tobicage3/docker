@@ -2,7 +2,7 @@ services:
   elfinder:
     build:
       context: .           # Dossier où se trouve ton Dockerfile
-      dockerfile: Dockerfile
+      dockerfile: dockerfile
     ports:
       - "8080:80"          # Port de l'hôte : port du conteneur
     volumes:
