@@ -1,0 +1,11 @@
+services:
+  elfinder:
+    build:
+      context: .           # Dossier où se trouve ton Dockerfile
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"          # Port de l'hôte : port du conteneur
+    volumes:
+      - ./files:/var/www/html/files   # Pour que elFinder ait un dossier persistant
+    environment:
+      - SERVICE_FQDN_ELFINDER_80
